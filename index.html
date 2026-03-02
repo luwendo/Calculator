@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: hsl(0, 2%, 25%);
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+}
+.calculator{
+    width: 270px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.calculator form input{
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 4px;
+    font-size: 1em;
+    font-weight: bolder;
+
+}
+input:active{
+    transform: translateY(2px);
+    transition: .2s;
+}
+form .display input{
+    text-align: end;
+    flex: 1;
+}
+#display{
+    width: 95%;
+    position: relative;
+    top: -10px;
+    padding: 10px 10px;
+    font-weight: bolder;
+    font-size: 1.2em;
+    background:  transparent;
+}
+#equal{
+    width: 45%;
+    font-size: 1.3em;
+    position: relative;
+    bottom: -2px;
+    background: blue;
+}
+#cc{
+    background: blue;
+}
+#aa{
+    color: red;
+}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Calculator </h1>
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display" id="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="display.value = ' ' " id="cc">
+                    <input type="button" value="DEL" onclick="display.value = display.value.toString().slice(0, -1)" id="cc">
+                    <input type="button" value="." onclick="display.value += '.' " id="aa">
+                    <input type="button" value="/" onclick="display.value += '/' " id="aa">
+                </div>
+                <div>
+                    <input type="button" value="9" onclick="display.value += '9' ">
+                    <input type="button" value="8" onclick="display.value += '8' ">
+                    <input type="button" value="7" onclick="display.value += '7' ">
+                    <input type="button" value="*" onclick="display.value += '*' " id="aa">
+                </div>
+                <div>
+                    <input type="button" value="6" onclick="display.value += '6' ">
+                    <input type="button" value="5" onclick="display.value += '5' ">
+                    <input type="button" value="4" onclick="display.value += '4' ">
+                    <input type="button" value="-" onclick="display.value += '-' " id="aa">
+                </div>
+                <div>
+                    <input type="button" value="3"  onclick="display.value += '3' ">
+                    <input type="button" value="2"  onclick="display.value += '2' ">
+                    <input type="button" value="1"  onclick="display.value += '1' ">
+                    <input type="button" value="+"  onclick="display.value += '+' " id="aa">
+                </div>
+                <div>
+                    <input type="button" value="0" onclick="display.value += '0' ">
+                    <input type="button" value="00" onclick="display.value += '00' ">
+                    <input type="button" value="=" id="equal" onclick="display.value = eval(display.value) ">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
